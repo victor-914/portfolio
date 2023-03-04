@@ -18,14 +18,29 @@ const StyledIndex = styled.section`
   position: relative;
   width: 100%;
   height: 100vh;
-  /* padding: ; */
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   .cover {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    flex-direction: column;
   }
 `;

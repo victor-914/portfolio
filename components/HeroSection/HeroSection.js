@@ -9,7 +9,7 @@ function HeroSection() {
   return (
     <StyledHeroSection>
       {state === "home" ? (
-        <HeroComp />
+        <HeroComp setState={setState} />
       ) : state === "projects" ? (
         <Projects />
       ) : null}
@@ -23,10 +23,28 @@ export default HeroSection;
 
 const StyledHeroSection = styled.section`
   width: 60%;
-  /* background: red; */
   height: 90%;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  /* justify-content: */
   position: relative;
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+    margin: auto;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 30px;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    background: red;
+    width: 90%;
+    flex-direction: column-reverse;
+  }
 `;

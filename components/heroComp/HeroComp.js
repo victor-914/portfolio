@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { AiOutlineHome } from "react-icons/ai";
-function HeroComp() {
+function HeroComp({ setState }) {
   return (
     <StyledHeroComp>
       <header className="header">
@@ -12,21 +12,22 @@ function HeroComp() {
       </header>
       <div className="introText">
         <span className="hello">Hello from</span>
-        <span className="name">Victor,</span> <br />
+        <span className="name"> Victor,</span> <br />
         <span className="dev"> A fullstack web developer</span>
         <br />
       </div>
-      <button className="projectButton">see projects</button>
+      <button className="projectButton" onClick={() => setState("projects")}>
+        see projects
+      </button>
 
       <main className="techStack">
         <header className="stackHeader">My technology stack are</header>
         <li>React</li>
         <li>Redux</li>
-        {/* <li>Vue</li> */}
+        <li>Tailwind CSS</li>
         <li>Express</li>
         <li>Node</li>
         <li>MongoDB</li>
-        {/* <li>Docker</li> */}
       </main>
 
       <div id="design">
@@ -56,7 +57,6 @@ const StyledHeroComp = styled.section`
   }
 
   .introText {
-    /* background: green; */
     color: #fff;
     font-size: 50px;
     padding: 10px;
@@ -117,5 +117,22 @@ const StyledHeroComp = styled.section`
     text-transform: uppercase;
     font-weight: 800;
     /* color: rgba(255, 255, 255, 0.7); */
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 30px;
+
+    .name {
+      margin-left: 100px;
+    }
+
+    .introText {
+      font-size: 30px;
+      padding: 10px;
+      width: 100%;
+      line-height: 1.5;
+    }
   }
 `;

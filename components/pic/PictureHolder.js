@@ -2,6 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import img from "../../assets/defaultAvatar.png";
 import Image from "next/image";
+import { BsGithub } from "react-icons/bs";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { MdEmail } from "react-icons/md";
+
 function PictureHolder() {
   return (
     <StyledPictureHolder>
@@ -21,10 +26,18 @@ function PictureHolder() {
         <div className=" intro base">Base in Abuja, Nigeria</div>
 
         <aside className="iconContainer">
-          <span className="icon"></span>
-          <span className="icon"></span>
-          <span className="icon"></span>
-          <span className="icon"></span>
+          <span className="icon">
+            <BsGithub id="icon" />
+          </span>
+          <span className="icon">
+            <AiFillLinkedin />
+          </span>
+          <span className="icon">
+            <MdEmail />
+          </span>
+          <span className="icon">
+            <AiFillTwitterCircle />
+          </span>
         </aside>
 
         <button className="cv">download cv</button>
@@ -36,7 +49,7 @@ const StyledPictureHolder = styled.div`
   width: 450px;
   height: 100%;
   position: relative;
-  z-index: 200;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,13 +64,18 @@ const StyledPictureHolder = styled.div`
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.23);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.81);
   }
 
   .mainHeader {
     width: 100%;
     height: 10%;
     padding: 5px;
-    /* background: red; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -100,6 +118,54 @@ const StyledPictureHolder = styled.div`
 
   .cv:hover {
     border: 2px solid #fff;
+  }
+
+  .iconContainer {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .icon:hover {
+    cursor: pointer;
+    transform: translateY(-4px);
+    box-shadow: -1px 1px 100px 10px rgba(0, 0, 0, 1);
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 95%;
+    height: 70vh;
+    margin: auto;
+
+    .victor {
+      font-size: 30px;
+      padding-top: 8px;
+      width: 100%;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 95%;
+    height: 70vh;
+    margin: auto;
+
+    .victor {
+      font-size: 30px;
+      padding-top: 8px;
+      width: 100%;
+      letter-spacing: 0.5px;
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    width: 80%;
+    height: 90vh;
+    margin: auto;
   }
 `;
 export default PictureHolder;

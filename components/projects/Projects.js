@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { BiCodeAlt } from "react-icons/bi";
 import Card from "./Card";
+import Project from "../../utils/Project";
+Project;
 function Projects() {
   return (
     <StyledProjects>
@@ -12,9 +14,9 @@ function Projects() {
         Projects
       </header>
       <main className="projectContainer">
-        <Card />
-        <Card />
-        <Card />
+        {Project.map((props) => (
+          <Card props={props} />
+        ))}
       </main>
     </StyledProjects>
   );
@@ -48,5 +50,19 @@ const StyledProjects = styled.section`
     gap: 10px;
     justify-content: center;
     padding-top: 20px;
+  }
+
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 90%;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    width: 98%;
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    background: green;
+    width: 80%;
   }
 `;
