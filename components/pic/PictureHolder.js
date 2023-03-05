@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import img from "../../assets/defaultAvatar.png";
+import Picture from "../../assets/profiePicture.png";
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
@@ -17,10 +17,8 @@ function PictureHolder() {
         </header>
 
         <main className="imgContainer">
-          <Image src={img} layout="fill" />
+          <Image src={Picture} layout="responsive" />
         </main>
-
-        <div className="intro email">Hello@Okaforv-914@gmail.com </div>
 
         <div className=" intro openRemote">Open to remote work</div>
         <div className=" intro base">Base in Abuja, Nigeria</div>
@@ -35,9 +33,9 @@ function PictureHolder() {
           <span className="icon">
             <MdEmail />
           </span>
-          <span className="icon">
+          {/* <span className="icon">
             <AiFillTwitterCircle />
-          </span>
+          </span> */}
         </aside>
 
         <button className="cv">download cv</button>
@@ -47,7 +45,7 @@ function PictureHolder() {
 }
 const StyledPictureHolder = styled.div`
   width: 450px;
-  height: 100%;
+  height: auto;
   position: relative;
   z-index: 2;
   display: flex;
@@ -58,7 +56,7 @@ const StyledPictureHolder = styled.div`
   .mainContainer {
     width: 90%;
     box-shadow: -1px 1px 100px 10px rgba(0, 0, 0, 0.7);
-    height: 90%;
+    height: 95%;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -70,6 +68,7 @@ const StyledPictureHolder = styled.div`
     backdrop-filter: blur(5.4px);
     -webkit-backdrop-filter: blur(5.4px);
     border: 1px solid rgba(255, 255, 255, 0.81);
+    padding-bottom: 10px;
   }
 
   .mainHeader {
@@ -89,10 +88,11 @@ const StyledPictureHolder = styled.div`
 
   .imgContainer {
     width: 70%;
-    height: 30%;
+    height: auto;
     margin: auto;
     border-radius: 8px;
     position: relative;
+    padding: 10px;
   }
 
   .intro {

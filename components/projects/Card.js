@@ -2,24 +2,22 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 
-// import Project from "../../utils/Project";
 function Card({ props }) {
   return (
     <StyledCard>
-      {/* <main className="imgContainer">
-        <Image layout="fill" src={props.img} />
-      </main> */}
       <div className="desc">{props.title}</div>
       <aside className="propsDesc">{props.description}</aside>
       <div className="stackContainer">
         {props.technology.map((item) => (
-          <button id="techButton">{item}</button>
+          <>
+            <button id="techButton">{item}</button>
+          </>
         ))}
       </div>
 
       <div className="linkContainer">
-        <button> git</button>
-        <button> live</button>
+        <button> git link</button>
+        <button> live link</button>
       </div>
     </StyledCard>
   );
@@ -48,7 +46,6 @@ const StyledCard = styled.section`
     width: auto;
     margin: auto;
     margin: 20px 0px;
-    /* color: rgba(255, 255, 255, 0.7); */
   }
 
   .stackContainer {
@@ -101,9 +98,14 @@ const StyledCard = styled.section`
 
   .linkContainer {
     display: flex;
-    width: 80%;
+    width: 90%;
     justify-content: space-between;
     font-size: 10px;
+  }
+
+  .linkContainer button {
+    width: 40%;
+    text-transform: Lowercase;
   }
 
   @media (min-width: 320px) and (max-width: 480px) {

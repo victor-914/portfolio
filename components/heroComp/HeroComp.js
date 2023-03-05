@@ -124,10 +124,6 @@ const StyledHeroComp = styled.section`
     margin: auto;
     padding-bottom: 30px;
 
-    .name {
-      margin-left: 100px;
-    }
-
     .introText {
       font-size: 30px;
       padding: 10px;

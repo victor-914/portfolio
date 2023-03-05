@@ -4,7 +4,7 @@ import { BiCodeAlt } from "react-icons/bi";
 import Card from "./Card";
 import Project from "../../utils/Project";
 Project;
-function Projects() {
+function Projects({ setState }) {
   return (
     <StyledProjects>
       <header className="header">
