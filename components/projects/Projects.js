@@ -15,7 +15,7 @@ function Projects({ setState }) {
       </header>
       <main className="projectContainer">
         {Project.map((props) => (
-          <Card props={props} />
+          <Card props={props} key={props._id} />
         ))}
       </main>
     </StyledProjects>
