@@ -3,14 +3,20 @@ import styled from "styled-components";
 import { BiCodeAlt } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
 
-function Nav({ setState }) {
+function Nav({ setState, state, checkActive }) {
   return (
     <StyledNav>
       <main className="navContainer">
-        <li onClick={() => setState("home")}>
+        <li
+          onClick={() => setState("home")}
+          className={`${checkActive(state, "home")}`}
+        >
           <AiOutlineHome />
         </li>
-        <li onClick={() => setState("projects")}>
+        <li
+          onClick={() => setState("projects")}
+          className={`${checkActive(state, "projects")}`}
+        >
           <BiCodeAlt />
         </li>
       </main>
@@ -31,6 +37,8 @@ const StyledNav = styled.section`
   align-items: center;
   flex-direction: column;
   color: #fff;
+  padding: 4px;
+
   border: 2px solid rgba(255, 255, 255, 0.5);
 
   li {
@@ -45,6 +53,11 @@ const StyledNav = styled.section`
     align-items: center;
     border: 1px solid transparent;
     cursor: pointer;
+  }
+
+  .active {
+    background: #4c2427;
+    color: #fff;
   }
 
   li:hover {
@@ -88,6 +101,7 @@ const StyledNav = styled.section`
     border: none;
     padding: 0;
     justify-content: flex-start;
+    margin-top: 10px;
 
     .navContainer {
       width: 50%;

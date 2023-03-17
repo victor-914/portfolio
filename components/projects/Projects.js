@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { BiCodeAlt } from "react-icons/bi";
 import Card from "./Card";
 import Project from "../../utils/Project";
-Project;
 function Projects({ setState }) {
   return (
     <StyledProjects>

@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "next/image";
-
 function Card({ props }) {
   return (
     <StyledCard>
@@ -16,8 +14,9 @@ function Card({ props }) {
       </div>
 
       <div className="linkContainer">
-        <button> git link</button>
-        <button> live link</button>
+        <a href={props.live} target="_blank">
+          live link
+        </a>
       </div>
     </StyledCard>
   );
@@ -80,11 +79,12 @@ const StyledCard = styled.section`
     font-weight: 800;
   }
 
-  button {
-    width: 80%;
+  a {
+    width: 60%;
     line-height: 2;
     margin: auto;
     cursor: pointer;
+    text-align: center;
     border-radius: 5px;
     border: 2px solid transparent;
     text-transform: uppercase;
@@ -92,7 +92,7 @@ const StyledCard = styled.section`
     color: #fff;
   }
 
-  button:hover {
+  a:hover {
     border: 2px solid #fff;
   }
 
@@ -105,7 +105,9 @@ const StyledCard = styled.section`
 
   .linkContainer button {
     width: 40%;
-    text-transform: Lowercase;
+    /* text-transform: Lowercase; */
+    background: #fff;
+    color: #4c2427;
   }
 
   @media (min-width: 320px) and (max-width: 480px) {

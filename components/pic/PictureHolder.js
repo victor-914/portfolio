@@ -13,7 +13,7 @@ function PictureHolder() {
       <main className="mainContainer">
         <header className="mainHeader">
           <span className="victor">Victor</span>
-          <span className="dev">Fullstack web developer</span>
+          <span className="dev">Full stack web developer</span>
         </header>
 
         <main className="imgContainer">
@@ -24,21 +24,25 @@ function PictureHolder() {
         <div className=" intro base">Base in Abuja, Nigeria</div>
 
         <aside className="iconContainer">
-          <span className="icon">
+          <a
+            className="icon"
+            target="_blank"
+            href="https://github.com/victor-914"
+          >
             <BsGithub id="icon" />
-          </span>
-          <span className="icon">
+          </a>
+          <a
+            href="https://www.linkedin.com/in/okafor-victor-a40971232"
+            target="_blank"
+            className="icon"
+          >
             <AiFillLinkedin />
-          </span>
-          <span className="icon">
-            <MdEmail />
-          </span>
-          {/* <span className="icon">
-            <AiFillTwitterCircle />
-          </span> */}
+          </a>
         </aside>
 
-        <button className="cv">download cv</button>
+        <a href="/myResume.pdf" className="cv" target="_blank">
+          download cv
+        </a>
       </main>
     </StyledPictureHolder>
   );
@@ -107,6 +111,7 @@ const StyledPictureHolder = styled.div`
     padding: 10px 0px;
     width: 80%;
     color: #fff;
+    text-align: center;
     text-transform: uppercase;
     margin: auto;
     border-radius: 8px;

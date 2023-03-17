@@ -6,6 +6,9 @@ import Projects from "../projects/Projects";
 
 function HeroSection() {
   const [state, setState] = useState("home");
+  const checkActive = (state, name) => {
+    return state === name ? "active" : null;
+  };
   return (
     <StyledHeroSection>
       {state === "home" ? (
@@ -14,7 +17,7 @@ function HeroSection() {
         <Projects />
       ) : null}
 
-      <Nav setState={setState} />
+      <Nav setState={setState} state={state} checkActive={checkActive} />
     </StyledHeroSection>
   );
 }

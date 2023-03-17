@@ -6,7 +6,7 @@ import HeroSection from "../components/HeroSection/HeroSection";
 export default function Home() {
   return (
     <StyledIndex style={{}}>
-      <Image src={bg} layout="fill" />
+      <Image src={bg} layout="fill" priority={true} />
       <div className="cover"></div>
       <PictureHolder />
       <HeroSection />
