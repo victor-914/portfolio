@@ -4,8 +4,6 @@ import Picture from "../../assets/profiePicture.png";
 import Image from "next/image";
 import { BsGithub } from "react-icons/bs";
 import { AiFillLinkedin } from "react-icons/ai";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { MdEmail } from "react-icons/md";
 
 function PictureHolder() {
   return (
@@ -27,6 +25,7 @@ function PictureHolder() {
           <a
             className="icon"
             target="_blank"
+            rel="noreferrer"
             href="https://github.com/victor-914"
           >
             <BsGithub id="icon" />
@@ -34,6 +33,7 @@ function PictureHolder() {
           <a
             href="https://www.linkedin.com/in/okafor-victor-a40971232"
             target="_blank"
+            rel="noreferrer"
             className="icon"
           >
             <AiFillLinkedin />

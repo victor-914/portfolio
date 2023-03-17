@@ -14,7 +14,7 @@ function Card({ props }) {
       </div>
 
       <div className="linkContainer">
-        <a href={props.live} target="_blank">
+        <a href={props.live} target="_blank" rel="noreferrer">
           live link
         </a>
       </div>
