@@ -44,7 +44,7 @@ const Project = [
       "Typegoose",
       "Typescript",
     ],
-    live: "/#",
+    live: "https://github.com/victor-914",
   },
 ];
 
