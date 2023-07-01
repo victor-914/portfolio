@@ -12,6 +12,25 @@ const Project = [
   //   live: "",
   //   gitLink: "",
   // },
+
+  {
+    _id: 586094,
+    img: gallery,
+    title: "Web Crawler",
+    description:
+      "Continously output urls linked to the root url until a certain depth specified by the user",
+    technology: ["Nextjs", "React", "Nodejs", "Puppeteer", "MongodB", "Docker"],
+    live: "https://github.com/victor-914",
+  },
+  {
+    _id: 94,
+    img: gallery,
+    title: "Google Recaptcha Bypassing Bot",
+    description:
+      "A Bot that detect,  fill web forms and automatically solve Google human verification recaptcha",
+    technology: ["Docker", "Nextjs", "Nodejs", "Puppeteer", "MongodB"],
+    live: "https://github.com/victor-914",
+  },
   {
     _id: 3,
     img: Company,
