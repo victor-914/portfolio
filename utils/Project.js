@@ -2,20 +2,18 @@ import gallery from "../assets/human_gallery.png";
 import Company from "../assets/whitelist.png";
 
 const Project = [
-  // {
-  //   _id: 1,
-  //   img: blog,
-  //   title: "Dynamic Blog",
-  //   description:
-  //     "Implemented CRUD operation, Authentication, Search Engine Optimization and Server Side rendering.",
-  //   technology: ["Nextjs", "React Admin", "Express", "MongoDb"],
-  //   live: "",
-  //   gitLink: "",
-  // },
+  {
+    _id: 743,
+    img: "",
+    title:"Ranger International Football Club Blog/Fixture/E-commerce solution Web Application",
+    description: "Developed an web application that integrate a blogging system, fixture managment system and ecommerce solution for a Football Club",
+    technology: ["Nextjs", "React", "Nodejs", "Material UI"],
+    live: "https://github.com/victor-914",
+  },
 
   {
     _id: 586094,
-    img: gallery,
+    img: "",
     title: "Web Crawler",
     description:
       "Continously output urls linked to the root url until a certain depth specified by the user",
@@ -23,14 +21,35 @@ const Project = [
     live: "https://github.com/victor-914",
   },
   {
-    _id: 94,
-    img: gallery,
-    title: "Google Recaptcha Bypassing Bot",
+    _id: 405675,
+    img: "",
+    title: "A vscode extension that lints code for accessibilty",
     description:
-      "A Bot that detect,  fill web forms and automatically solve Google human verification recaptcha",
-    technology: ["Docker", "Nextjs", "Nodejs", "Puppeteer", "MongodB"],
+      "Built a Web Application for listing properties",
+    technology: ["Nextjs", "MongodB", "Nodejs", "Express", "Cloudinary"],
     live: "https://github.com/victor-914",
   },
+
+  {
+    _id: 40975,
+    img: "",
+    title: "Jeffy-Realty Real Estate Web Application",
+    description:
+      "Built a Web Application for listing properties",
+    technology: ["Nextjs", "MongodB", "Nodejs", "Express", "Cloudinary"],
+    live: "https://jeffy-realty.com",
+  },
+
+  {
+    _id: 40975,
+    img: "",
+    title: "A web application that rewards user for completing microtasks",
+    description:
+      "Consume Api from a microservice architecture",
+    technology: ["Nextjs", "MongodB", "Nodejs", "Express", "Cloudinary"],
+    live: "https://everpump.io",
+  },
+ 
   {
     _id: 3,
     img: Company,
@@ -47,23 +66,6 @@ const Project = [
       "Online Display of Human visuals with CRUD operation for Adminstrator, Basic authentication for admin. I implement dynamic routing in express and Client side rendering in react",
     technology: ["Nextjs", "MongodB", "Nodejs", "Express", "Cloudinary"],
     live: "https://anatomy-gallery.vercel.app",
-  },
-  {
-    _id: 5,
-    img: gallery,
-    title: "Backend for a real estate Startup",
-    description:
-      "Backend for a real estate business with  user authentication, user password reset,  user email confirmation and form input validation",
-    technology: [
-      "Nextjs",
-      "React",
-      "Nodejs",
-      "Graphql",
-      "MongodB",
-      "Typegoose",
-      "Typescript",
-    ],
-    live: "https://github.com/victor-914",
   },
 ];
 

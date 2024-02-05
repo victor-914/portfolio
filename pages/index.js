@@ -6,10 +6,12 @@ import HeroSection from "../components/HeroSection/HeroSection";
 export default function Home() {
   return (
     <StyledIndex style={{}}>
-      <Image src={bg} layout="fill" priority={true} />
+      <Image src={bg} layout="fill" alt="" priority={true} />
       <div className="cover"></div>
-      <PictureHolder />
-      <HeroSection />
+      <div className="cont">
+        <PictureHolder />
+        <HeroSection />
+      </div>
     </StyledIndex>
   );
 }
@@ -18,10 +20,20 @@ const StyledIndex = styled.section`
   position: relative;
   width: 100%;
   height: 100vh;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  .cont {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .cover {
     width: 100%;
@@ -31,16 +43,26 @@ const StyledIndex = styled.section`
   }
 
   @media (min-width: 320px) and (max-width: 480px) {
-    flex-direction: column;
-    height: auto;
+    height: 150vh;
+    .cont {
+      flex-direction: column;
+      height: auto;
+    }
   }
 
   @media (min-width: 481px) and (max-width: 768px) {
-    flex-direction: column;
-    height: auto;
+     height: 150vh;
+    .cont {
+      flex-direction: column;
+      height: auto;
+    }
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    flex-direction: column;
+      height: 150vh;
+    .cont {
+      flex-direction: column;
+      height: auto;
+    }
   }
 `;

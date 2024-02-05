@@ -28,6 +28,11 @@ function HeroComp({ setState }) {
         <li>Express</li>
         <li>Node</li>
         <li>MongoDB</li>
+        <li>MySql</li>
+        <li>Typescript</li>
+        <li>Nestjs</li>
+        <li>AWS</li>
+        <li>Docker</li>
       </main>
 
       <div id="design">

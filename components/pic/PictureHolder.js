@@ -15,7 +15,7 @@ function PictureHolder() {
         </header>
 
         <main className="imgContainer">
-          <Image src={Picture} layout="responsive" />
+          <Image src={Picture} alt="" layout="responsive" />
         </main>
 
         <div className=" intro openRemote">Open to remote work</div>
@@ -141,7 +141,7 @@ const StyledPictureHolder = styled.div`
 
   @media (min-width: 320px) and (max-width: 480px) {
     width: 95%;
-    height: 70vh;
+    height: 50vh;
     margin: auto;
 
     .victor {
@@ -155,7 +155,7 @@ const StyledPictureHolder = styled.div`
 
   @media (min-width: 481px) and (max-width: 768px) {
     width: 95%;
-    height: 70vh;
+    height: 50vh;
     margin: auto;
 
     .victor {

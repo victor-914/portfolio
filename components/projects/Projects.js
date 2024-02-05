@@ -25,7 +25,7 @@ export default Projects;
 
 const StyledProjects = styled.section`
   width: 70%;
-  height: 90%;
+  height: 50vh;
   color: #fff;
   overflow-y: scroll;
 
@@ -61,7 +61,7 @@ const StyledProjects = styled.section`
   }
 
   @media (min-width: 769px) and (max-width: 1024px) {
-    background: green;
     width: 80%;
+    height: 40vh;
   }
 `;
